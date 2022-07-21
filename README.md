@@ -1,10 +1,10 @@
 # translateio
 
-A new Flutter project.
+My Flutter Project For Interview Purpose. If you like the project please like this.
 
-## Getting Started
+## Info
 
-This project is a starting point for a Flutter application.
+It is a Voice translation app using flutter.
 
 A few resources to get you started if this is your first Flutter project:
 
