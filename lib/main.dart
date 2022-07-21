@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:translateio/pages/homepage.dart';
 
 void main() {
@@ -15,7 +14,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.orange,
-        //textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       home: HomePage(),
     );
