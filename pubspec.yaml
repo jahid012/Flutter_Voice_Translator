@@ -34,18 +34,18 @@ dependencies:
   translator: ^0.1.7
   flutter_native_splash: ^2.0.1
   internet_connection_checker: ^0.0.1+2
-  
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  rename: any
+  url_launcher: ^6.1.7
   cupertino_icons: ^1.0.2
+  flutter_launcher_icons: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.9.3
+
 
 flutter_icons:
-  android: "launcher_icon"
+  android: true
   ios: true
   image_path: "assets/translate_icon.png"
 

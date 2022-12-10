@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
    <application
-        android:label="TranslateIO By Jahid"
+        android:label="TranslateIO"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

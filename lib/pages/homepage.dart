@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
@@ -6,6 +7,7 @@ import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:translateio/utils/styles.dart';
 import 'package:translateio/widgets/input_field.dart';
 import 'package:translator/translator.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -88,6 +90,14 @@ class _HomePageState extends State<HomePage> {
     super.dispose();
   }
 
+  final Uri _url = Uri.parse('https://sites.google.com/view/translateio/home');
+
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(_url)) {
+      throw 'Could not launch $_url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,6 +106,15 @@ class _HomePageState extends State<HomePage> {
           "Voice Translator",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
+        actions: [
+          InkWell(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(Icons.privacy_tip_outlined),
+            ),
+            onTap: _launchUrl,
+          )
+        ],
         centerTitle: true,
       ),
       body: connection
